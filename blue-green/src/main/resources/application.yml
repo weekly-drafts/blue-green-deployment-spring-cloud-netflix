@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: bluegreen
+
+eureka:
+  instance:
+    metadata-map:
+      env: green
+
+---
+spring:
+  profiles: blue
+
+server:
+  port: 8081
+
+eureka:
+  instance:
+    metadata-map:
+      env: blue
